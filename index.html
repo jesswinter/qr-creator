@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>QR Code Creator</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      type="module"
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.4.4/qrcode.js"
+    ></script>
+    <script type="module" src="qr-creator.js"></script>
+  </head>
+  <body>
+    <main id="main">
+      <section class="section">
+        <div class="wrapper text-flow">
+          <h1 class="hero__title">QR Code Creator</h1>
+          <p>
+            Create QR codes with links or other content. No signup or
+            installation required—it's quick, simple, and free.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrapper qr-creator">
+          <div id="qr-settings" class="floating-panel">
+            <div class="input-group">
+              <label for="qr-text-input" class="input-floating-label"
+                >URL</label
+              >
+              <input
+                type="text"
+                id="qr-text-input"
+                class="text-field"
+                value="https://example.com"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="qr-error-correction" class="input-floating-label"
+                >Error Correction</label
+              >
+              <select id="qr-error-correction">
+                <option value="L">Low (7%)</option>
+                <option value="M" selected>Medium (15%)</option>
+                <option value="Q">Quartile (25%)</option>
+                <option value="H">High (30%)</option>
+              </select>
+            </div>
+
+            <div class="input-group" data-ig-type="color">
+              <label for="qr-background-color" class="input-floating-label"
+                >Background Color</label
+              >
+              <input type="text" class="text-field" />
+              <input type="color" id="qr-background-color" value="#ffffff" />
+            </div>
+            <div class="input-group" data-ig-type="color">
+              <label for="qr-foreground-color" class="input-floating-label"
+                >Foreground Color</label
+              >
+              <input type="text" class="text-field" />
+              <input type="color" id="qr-foreground-color" value="#000000" />
+            </div>
+            <div class="input-group">
+              <label for="qr-download-format" class="input-floating-label"
+                >Format</label
+              >
+              <select id="qr-download-format">
+                <option value="image/png" selected>PNG</option>
+                <option value="image/webp">WebP</option>
+                <option value="image/jpeg">JPEG</option>
+                <option value="image/tiff">TIFF</option>
+                <option value="image/gif">GIF</option>
+              </select>
+            </div>
+
+            <div class="qr-download-btn-group input-group">
+              <button id="qr-download-btn" type="button" class="button">
+                Download
+              </button>
+            </div>
+          </div>
+
+          <div class="qr-output-wrapper floating-panel">
+            <output class="qr-output">
+              <canvas id="qr-preview"></canvas>
+            </output>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

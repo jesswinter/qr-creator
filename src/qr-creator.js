@@ -1,3 +1,5 @@
+import QRCode from "qrcode";
+
 document.addEventListener("DOMContentLoaded", qrCreator_DOMContentLoaded);
 
 function qrCreator_DOMContentLoaded() {
@@ -25,42 +27,39 @@ function qrCreator_DOMContentLoaded() {
   const qrDownloadBtn = document.getElementById("qr-download-btn");
   const qrPreviewCanvas = document.getElementById("qr-preview");
 
-  qrDownloadBtn.addEventListener(
-    "click",
-    function qrDownloadBtnDown(event) {
-      const filename = "qrcode";
-      const requestedFormat = qrDownloadFormatSelect.value;
-      const dataUrl = qrPreviewCanvas.toDataURL(requestedFormat);
+  qrDownloadBtn.addEventListener("click", function qrDownloadBtnDown(event) {
+    const filename = "qrcode";
+    const requestedFormat = qrDownloadFormatSelect.value;
+    const dataUrl = qrPreviewCanvas.toDataURL(requestedFormat);
 
-      // skip "data:" and grab everything up to and excluding ";";
-      const receivedFormat = dataUrl.substring(5, dataUrl.indexOf(";"));
-      if (requestedFormat !== receivedFormat) {
-        console.warn(
-          `Requested format ${requestedFormat} cannot be generated with this browser. Defaulting to ${receivedFormat}`
-        );
-      }
-
-      let fileExtension;
-      if (receivedFormat === "image/png") {
-        fileExtension = "png";
-      } else if (receivedFormat === "image/webp") {
-        fileExtension = "webp";
-      } else if (receivedFormat === "image/jpeg") {
-        fileExtension = "jpg";
-      } else if (receivedFormat === "image/tiff") {
-        fileExtension = "tif";
-      } else if (receivedFormat === "image/gif") {
-        fileExtension = "gif";
-      } else {
-        throw new Error(`Unknown image format ${receivedFormat}`);
-      }
-
-      const link = document.createElement("a");
-      link.download = `${filename}.${fileExtension}`;
-      link.href = dataUrl;
-      link.click();
+    // skip "data:" and grab everything up to and excluding ";";
+    const receivedFormat = dataUrl.substring(5, dataUrl.indexOf(";"));
+    if (requestedFormat !== receivedFormat) {
+      console.warn(
+        `Requested format ${requestedFormat} cannot be generated with this browser. Defaulting to ${receivedFormat}`
+      );
     }
-  );
+
+    let fileExtension;
+    if (receivedFormat === "image/png") {
+      fileExtension = "png";
+    } else if (receivedFormat === "image/webp") {
+      fileExtension = "webp";
+    } else if (receivedFormat === "image/jpeg") {
+      fileExtension = "jpg";
+    } else if (receivedFormat === "image/tiff") {
+      fileExtension = "tif";
+    } else if (receivedFormat === "image/gif") {
+      fileExtension = "gif";
+    } else {
+      throw new Error(`Unknown image format ${receivedFormat}`);
+    }
+
+    const link = document.createElement("a");
+    link.download = `${filename}.${fileExtension}`;
+    link.href = dataUrl;
+    link.click();
+  });
 
   function generateQrCode() {
     if (!qrTextInput.value) {

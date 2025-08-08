@@ -1,0 +1,28 @@
+{
+  "name": "qr-creator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "Jess Winter",
+  "license": "MIT",
+  "packageManager": "pnpm@10.14.0",
+  "browserslist": [
+    "last 2 version",
+    "> 0.2%",
+    "not dead"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.1.0",
+    "postcss-nesting": "^13.0.2",
+    "vite": "^7.1.1"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  }
+}

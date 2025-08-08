@@ -1,0 +1,20 @@
+{
+  "name": "qr-creator",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "Jess Winter",
+  "license": "MIT",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "vite": "^7.1.1"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  }
+}

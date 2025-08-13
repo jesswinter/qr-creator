@@ -62,6 +62,8 @@ function qrCreator_DOMContentLoaded() {
   });
 
   function generateQrCode() {
+    qrOutputWrapper.style.backgroundColor = qrBackgourndColorInput.value;
+
     if (!qrTextInput.value) {
       console.error(`Invalid URL: ${qrTextInput.value}`);
       return;

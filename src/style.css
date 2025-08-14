@@ -92,29 +92,7 @@
   :root {
     /* Design token primitives */
 
-    --grey-100: hsl(0 0% 98%);
-    --grey-200: hsl(0 0% 96%);
-    --grey-300: hsl(0 0% 93%);
-    --grey-400: hsl(0 0% 88%);
-    --grey-500: hsl(0 0% 74%);
-    --grey-600: hsl(0 0% 62%);
-    --grey-700: hsl(0 0% 46%);
-    --grey-800: hsl(0 0% 38%);
-    --grey-900: hsl(0 0% 26%);
-    --grey-950: hsl(0 0% 13%);
-
-    --blue-grey-50: hsl(204 15% 98%);
-    --blue-grey-100: hsl(204, 16%, 94%);
-    --blue-grey-200: hsl(198 16% 84%);
-    --blue-grey-300: hsl(200 15% 73%);
-    --blue-grey-400: hsl(200 16% 62%);
-    --blue-grey-500: hsl(200 15% 54%);
-    --blue-grey-600: hsl(200 18% 46%);
-    --blue-grey-700: hsl(199 18% 40%);
-    --blue-grey-800: hsl(199 18% 33%);
-    --blue-grey-900: hsl(200 18% 26%);
-    --blue-grey-950: hsl(200 19% 18%);
-
+    --green-50: hsl(125 36% 96%);
     --green-100: hsl(125 39% 94%);
     --green-200: hsl(122 38% 84%);
     --green-300: hsl(122 37% 74%);
@@ -123,8 +101,8 @@
     --green-600: hsl(122 39% 49%);
     --green-700: hsl(123 41% 45%);
     --green-800: hsl(123 43% 39%);
-    --green-900: hsl(123 46% 34%);
-    --green-950: hsl(124 55% 24%);
+    --green-900: hsl(123 46% 30%);
+    --green-950: hsl(124 55% 14%);
   }
 
   :root {
@@ -154,15 +132,15 @@
 
     /* @media (prefers-color-scheme: light) { */
 
-    --color-background: var(--blue-grey-100);
-    --color-foreground: var(--blue-grey-900);
-    --color-accent: var(--blue-grey-800);
-    --color-accent-bright: var(--blue-grey-700);
-    --color-flash: var(--blue-grey-500);
+    --color-background: var(--green-100);
+    --color-foreground: var(--green-900);
+    --color-accent: var(--green-800);
+    --color-accent-bright: var(--green-700);
+    --color-flash: var(--green-500);
 
-    --color-shadow: hsla(200 18% 26% / 0.2);
+    --color-shadow: hsla(124 55% 24% / 0.2);
 
-    --color-ui-background: var(--blue-grey-50);
+    --color-ui-background: var(--green-50);
 
     --shadow-regular: 1px 3px 10px var(--color-shadow);
 
@@ -263,18 +241,18 @@
   }
 
   .button {
-    --button-back-color: var(--blue-grey-800);
-    --button-fore-color: var(--blue-grey-200);
+    --button-back-color: var(--green-800);
+    --button-fore-color: var(--green-100);
 
-    --button-hover-back-color: var(--blue-grey-700);
-    --button-hover-fore-color: var(--blue-grey-100);
+    --button-hover-back-color: var(--green-700);
+    --button-hover-fore-color: var(--green-100);
     --button-hover-shadow: 2px 4px 10px hsla(200 18% 26% / 0.5);
 
     --button-focus-outline-width: 4px;
-    --button-focus-outline-color: var(--blue-grey-500);
+    --button-focus-outline-color: var(--green-500);
 
-    --button-active-back-color: var(--blue-grey-600);
-    --button-active-fore-color: var(--blue-grey-50);
+    --button-active-back-color: var(--green-600);
+    --button-active-fore-color: var(--green-50);
 
     background-color: var(--button-back-color);
     color: var(--button-fore-color);

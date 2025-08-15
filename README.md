@@ -1,3 +1,3 @@
 # QR Creator
 
-A simple QR code creator under [MIT license](./LICENSE).
+A simple, client-only, privacy-respecting QR code creator under [MIT license](./LICENSE).

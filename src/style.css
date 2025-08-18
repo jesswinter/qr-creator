@@ -328,6 +328,12 @@
     }
 
     & select {
+      appearance: none;
+      background-image: url(assets/arrow-drop-down.svg);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 30px;
+
       width: 100%;
       background-color: var(--color-ui-background);
       border: 1px solid var(--color-foreground);
